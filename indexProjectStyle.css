@@ -1,0 +1,122 @@
+@font-face {
+	font-family: CruiserHollowBold;
+	src: url(src/2015CruiserHollowBold.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+    --card-color: rgb(23, 23, 23);
+}
+  
+html{
+	scroll-behavior: smooth;
+}
+
+section h2 {
+	font-family: Excluded;
+	font-size: 50px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	opacity: 1.0;
+	
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: 20%; /* just to show overlap */
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	text-shadow: rgba(0, 0, 0, 0.03) 0 -2px;
+
+	background-image: linear-gradient(to right, #060606, #2C3E50);
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: titleReveal 3s 1;
+}
+
+section .foreground {
+	position: relative;
+}
+
+.hero .nav ul {
+	position: fixed;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.hero .nav li {
+	float: left;
+}
+
+.hero .nav a {
+	display: block;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: Arial Narrow;
+
+	color: #0ad1e8;
+	text-shadow:
+		0 0 7px #0ad1e8,
+		0 0 10px #0ad1e8,
+		0 0 21px #0ad1e8,
+		0 0 42px black,
+		0 0 82px black,
+		0 0 92px black,
+		0 0 102px black,
+		0 0 151px black;
+}
+
+.hero .nav li a:hover {
+	text-shadow: rgba(0, 0, 0, 0.03) 0 -2px;
+}
+
+
+body {
+    align-items: Top;
+     /* radial-gradient(circle, hsla(263, 100%, 26%, 1) 0%, hsla(0, 0%, 4%, 1) 100%); */
+     /* radial-gradient(circle, hsla(154, 100%, 9%, 1) 0%, hsla(240, 3%, 6%, 1) 91%); */
+     /* radial-gradient(circle, hsla(263, 100%, 13%, 1) 0%, hsla(0, 0%, 4%, 1) 80%);*/
+    background-image: linear-gradient(to right, #000000  , #130F40);
+    display: flex;
+    height: 100vh;
+    justify-content: left;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#cards {
+
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 916px;
+    width: calc(100% - 20px);
+}
+
+.card {
+  /* should rework this part and center it automatically not manually like % */
+    top: 20%; /* just to show overlap */
+	left: 45%;
+	transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9px;
+    cursor: pointer;
+    position: relative;
+    height:260px;
+    width:300px;
+}

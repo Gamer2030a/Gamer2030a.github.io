@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 200vh;
+}
+
+section {
+	background-image: url('https://assets.codepen.io/4806767/background-mountain.jpg');
+	background-size: cover;
+	border: 1px solid red;
+	
+	position: relative;
+	background-attachment: fixed;
+}
+
+section .foreground img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 2px solid blue;
+}
+
+section h2 {
+	font-family: Excluded;
+	font-size: 50px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	opacity: 1.0;
+	
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: 40%; /* just to show overlap */
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+
+	background-image: url('https://assets.codepen.io/4806767/background-mountain.jpg');
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: titleReveal 3s 1;
+}
+
+
+@keyframes titleReveal {
+	0%{
+	  margin-bottom: -40px;
+	  opacity: 0%;
+	}
+	30%{
+	  opacity: 10%;
+	  letter-spacing: 40px;
+	  margin-bottom: -40px;
+	}
+	45%{
+	  opacity: 20%;
+	  margin-bottom: -40px;
+	  
+	}
+	85%{
+	  opacity: 50%;
+	  letter-spacing: 4px;
+	  margin-bottom: -40px;
+	}
+  
+  }
+
+section .foreground {
+	position: relative;
+}

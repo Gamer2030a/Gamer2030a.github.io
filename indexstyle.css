@@ -1,0 +1,153 @@
+@font-face {
+	font-family: CruiserHollowBold;
+	src: url(src/2015CruiserHollowBold.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+section {
+	background-image: url('src/yiran.jpg');
+	background-size: cover;
+	position: relative;
+	background-attachment: relative;
+}
+
+section .foreground img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+section h2 {
+	font-family: Excluded;
+	font-size: 50px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	opacity: 1.0;
+	
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: 40%; /* just to show overlap */
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	text-shadow: rgba(0, 0, 0, 0.03) 0 -2px;
+
+	background-image: url('src/yiran.jpg');
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: titleReveal 3s 1;
+}
+
+
+@keyframes titleReveal {
+	0%{
+	  margin-bottom: -40px;
+	  opacity: 0%;
+	}
+	30%{
+	  opacity: 10%;
+	  letter-spacing: 40px;
+	  margin-bottom: -40px;
+	}
+	45%{
+	  opacity: 20%;
+	  margin-bottom: -40px;
+	  
+	}
+	85%{
+	  opacity: 50%;
+	  letter-spacing: 4px;
+	  margin-bottom: -40px;
+	}
+  
+  }
+
+section .foreground {
+	position: relative;
+}
+
+.hero .nav ul {
+	position: fixed;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.hero .nav li {
+	float: left;
+}
+
+.hero .nav a {
+	display: block;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: Arial Narrow;
+
+	background-image: url('src/yiran.jpg');
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+
+	color: #0ad1e8;
+	text-shadow:
+		0 0 7px #0ad1e8,
+		0 0 10px #0ad1e8,
+		0 0 21px #0ad1e8,
+		0 0 42px black,
+		0 0 82px black,
+		0 0 92px black,
+		0 0 102px black,
+		0 0 151px black;
+}
+
+.hero .nav li a:hover {
+	text-shadow: rgba(0, 0, 0, 0.03) 0 -2px;
+}
+
+.hero .tran1{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+.hero .tran2{
+	color: rgb(255, 0, 0);
+
+}
+
+.mid{
+	background-color: #0ad1e8;
+	background-image: url('src/yiran-Fliped.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 750px;
+	width: 100%;
+}
+
+
+.mid p{
+	font-family: CruiserHollowBold;
+	font-size: 48px;
+	margin-left: 40%;
+
+	color: white;
+}
+
