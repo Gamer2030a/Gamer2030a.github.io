@@ -1,0 +1,9 @@
+background: hsla(154, 100%, 9%, 1);
+
+background: radial-gradient(circle, hsla(154, 100%, 9%, 1) 0%, hsla(240, 3%, 6%, 1) 91%);
+
+background: -moz-radial-gradient(circle, hsla(154, 100%, 9%, 1) 0%, hsla(240, 3%, 6%, 1) 91%);
+
+background: -webkit-radial-gradient(circle, hsla(154, 100%, 9%, 1) 0%, hsla(240, 3%, 6%, 1) 91%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#002E1A", endColorstr="#0E0E0F", GradientType=1 );
