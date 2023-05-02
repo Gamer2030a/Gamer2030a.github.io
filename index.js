@@ -1,3 +1,18 @@
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.querySelector(
+        "body").style.visibility = "hidden";
+      document.querySelector(
+        "#preloader").style.visibility = "visible";
+        window.scrollTo(0, 0);
+  } else {
+      document.querySelector(
+        "#preloader").style.display = "none";
+      document.querySelector(
+        "body").style.visibility = "visible";
+  }
+};
+
 window.onload = function()  {
   document.getElementById("SecondaryQuote").style.display  = "none";
   document.getElementById("nav").style.visibility  = "hidden";
