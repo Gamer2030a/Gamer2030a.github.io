@@ -6,30 +6,135 @@
 	<title>ParsaDehghani</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="./indexstyle.css">
-	
+	<script src="index.js"></script>
 
 </head>
 <body>
 <div class="hero">
 	<section>
-<!--		<div class="tran0" id="Tran0"><h2>Welcome to my Portfolio</h2></div>-->
-		<div class="tran2" id="Tran2"><h2>I try to make my dreams a reality</h2></div>
+		<div class="tran2" id="MainQuote"><h2>Welcome to my Portfolio</h2></div>
+		<div class="SecondaryQuote" id="SecondaryQuote"><h3>Where I try to extract the possible from impossible</h3></div>
 		<div class="tran1"><h2>Projects</h2></div>
 		<div class='foreground'>
-		<div class="nav">
+		<div class="parent nav">
 			<ul class="main-nav">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="indexProject.html">Projects</a></li>
-				<li><a href="404page.html">Applications</a></li>
-				<li><a href="404page.html">Documents</a></li>
-				<li><a href="404page.html">About me</a></li>
+				<li><a href="ComingSoon.html">Projects</a></li>
+				<li><a href="ComingSoon.html">Applications</a></li>
+				<li><a href="ComingSoon.html">Documents</a></li>
+				<li><a href="ComingSoon.html">About me</a></li>
 			</ul>
+			<div class="hamMenuToggle">
+				<input class="child menutoggle" id="menutoggle" type="checkbox" />
+				<span></span>
+				<span id="SPMiddle"></span>
+				<span></span>
+			</div>
 		</div>
 		<img src="src/yiran-Cutout.png" alt="">
 	</div>
-</section>
+	</section>
 </div>
 <div class="mid">
+</div>
+<div class="Content">
+	<div class="AboutMe">
+		<div class="Projects">
+			<div class="Cards">
+				<div class="Card">
+					<div class="Card-Cover" style="background-image: url(src/Cards/daqvxqw-a1527d0a-c6cb-4034-b268-effdf1e70694.jpg);"></div>
+					<div class="cover"></div>
+				</div>
+				<div class="Card">
+					<div class="Card-Cover" style="background-image: url(src/de.jpg);"></div>
+					<div class="cover"></div>
+				</div>
+				<div class="Card">
+					<div class="Card-Cover" style="background-image: url(src/photorock.jpg); background-size:cover; background-position-x: -40px; "></div>
+						<div class="cover"></div>
+				</div>
+				<div class="Card">
+					<div class="Card-Cover" style="background-image: url(src/bd42jungle.png); background-size: cover; background-position-x: -340px;"></div>
+					<div class="cover"></div>
+				</div>
+				<div class="Card">
+					<div class="Card-Cover" style="background-image: url(src/NewLand.png);"></div>
+
+					<div class="cover"></div>
+				</div>
+				<div class="Card">
+					<div class="Card-Cover" style="background-image: url(src/NewLand.jpg);"></div>
+					<div class="cover"></div>
+				</div>
+			</div>
+		</div>
+		<div class="WeatherSystem">
+			<div class="WSDes">
+				<h3>Weather system</h3>
+				<p>Weather system 2.0 is a dynamic day and night system with support for random weathers such as: <br>
+					1-Rain
+					<br>
+					2-Snow
+					<br>
+					3-Thunder
+					<br>
+					4-Sunny
+					<br>
+					5-Fog
+					<br>
+					6-HeavyWind
+					<br>
+					and more all configurable at real time in game and editor using the event system and properties panel<br>
+					several settings are exposed for modifying such as could speed and coverage<br>
+					rain amount and time for rain <br>
+					fog depth , amount and density for fog<br>
+					and more for other weather types plus a lot of debug options available for the user.
+				</p>
+				<button>OpenPage</button>
+			</div>
+			<div class="WSVid">
+				<iframe class = "Wvideo" width="100%" height="100%" src="https://www.youtube.com/embed/TMVZjNcHzMI?controls=0;&autoplay=1&mute=1&loop=1" title="WeatherSystemShowcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="CryengineHorror">
+			<div class="CHDes">
+				<h3>Blender Car Render</h3>
+				<p>A series of renders of a corvette c8 in a racing track and road using blender <br>
+				</p>
+				<button>OpenPage</button>
+			</div>
+			<div class="CHVid" width="100%" height="100%">
+			</div>
+		</div>
+		<div class="tac">
+			<div class="TCDes">
+				<h3>Beautiful scenery</h3>
+				<p>A Beautiful sunny beach made in UE4 <br>
+					with custom water shader and Megascan rocks<br>
+					 and custom weather plugin
+				</p>
+				<button>OpenPage</button>
+			</div>
+			<div class="TCVid" width="100%" height="100%">
+			</div>
+		</div>
+		<div class="aboutMe">
+			<div class="AMGallery" width="100%" height="100%"></div>
+			<div class="AMCard">
+				<img class="profile-card">
+				<h3>About Me</h3>
+				<p>Some info about me : <br>
+					Languages : C++/C#/Python/Html/CSS/JS <br>
+					Education : Currently studying at Khorasgan University<br>
+					Hi I'm Parsa Dehghani and I'm a Fast learner and a curios person, I'm good at C++, python and know C#, HTML & CSS. On the game dev side I work with UE4 & UE5.<br>
+				</p>
+				<button onclick="window.location.href='https://github.com/Gamer2030a';" >Github</button>
+				<button onclick="window.location.href='https://parsadehghani.artstation.com/';" >Artstation</button>
+				<button><a href="mailto:gamer2030fasterthangame@gmail.com">Email me</a></button>
+				<button onclick="window.location.href='https://dev.epicgames.com/community/profile/zVGJ/Gamer2030';" >Epic Dev</button>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

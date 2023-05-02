@@ -1,12 +1,18 @@
-function myFunction() {
-    var x = document.getElementById("Tran0");
-    x.style.display === "none"
-      x.style.display = "block";
+window.onload = function()  {
+  document.getElementById("SecondaryQuote").style.display  = "none";
+  document.getElementById("nav").style.visibility  = "hidden";
 }
 
-window.addEventListener("scroll", function() {
-    var elementTarget = document.getElementById("section-2");
-    if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-        alert("You've scrolled past the second div");
-    }
-  });
+window.onscroll = function() {
+  var y = window.scrollY;
+  if (y > 1350) {
+    document.getElementById("SecondaryQuote").style.display   = "none";
+    document.getElementById("MainQuote").style.visibility  = "hidden";
+  }else if (y > 290) {
+    document.getElementById("MainQuote").style.visibility   = "hidden";
+    document.getElementById("SecondaryQuote").style.display  = "block";
+  }else {
+    document.getElementById("MainQuote").style.visibility   = "visible";
+    document.getElementById("SecondaryQuote").style.display  = "none";
+  }
+};
