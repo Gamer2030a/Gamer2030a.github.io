@@ -373,7 +373,9 @@ width: 100%;
 	width: 100%;
 	height: 100%;
 	background-color: #171717;
-	margin-top: 30%
+	margin-top: 30%;
+
+	position: relative;
 }
 
 .aboutMe .AMCard{
@@ -451,7 +453,7 @@ box-shadow:
 }
 
 .AMGallery{
-	background-image: url('src/henning-witzel-ukvgqriuOgo-unsplash.jpg');
+	background-image: url('src/yiran.webp');
 	width: 50%;
 	height: 50%;
 }
