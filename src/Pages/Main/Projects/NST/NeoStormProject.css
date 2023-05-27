@@ -27,7 +27,7 @@ html, body {
 }
 
 .Banner{
-background-image: url("/src/images/StormScreen.jpg");
+background-image: url("/src/Images/StormScreen.jpg");
 background-size: cover;
 background-position-y: -280px;
 height: 250px;
