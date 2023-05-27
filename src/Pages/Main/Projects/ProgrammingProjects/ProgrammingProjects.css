@@ -1,0 +1,134 @@
+@font-face {
+	font-family: Excluded;
+	src: url(/src/Fonts/Excluded.ttf);
+}
+
+@font-face {
+	font-family: NotoSans;
+	src: url(/src/Fonts/NotoSans-Regular.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+    background-color: #171717;
+    background-size: cover;
+    overflow-x:hidden
+}
+
+html, body {
+    height: 100%;
+}
+
+.Content{
+    width: 100%;
+    height: 100%;
+}
+
+.Banner{
+    width: 100vw;
+    height: 30%;
+    background-image: url("/src/images/stpst.jpg");
+    background-size: cover;
+    background-position-y: -200px;
+}
+
+.Banner h1{
+    color: white;
+	text-shadow:
+	0 0 7px #0ad2e8f6,
+	0 0 10px #0ad2e8de,
+	0 0 21px #0ad2e8af;
+    font-family: excluded;
+    font-size: 2em;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 1%;
+  }
+  
+  .project-card {
+    background-color: #202020;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .project-details {
+    flex-grow: 1;
+  }
+  
+  .project-details h3 {
+    font-size: 24px;
+    margin-top: 0;
+    text-align: center;
+    font-family: excluded;
+
+    color: white;
+	text-shadow:
+	0 0 7px #0ad2e8f6,
+	0 0 10px #0ad2e8de,
+	0 0 21px #0ad2e8af;
+  }
+  
+  .project-details p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-family: NotoSans;
+  }
+  
+  .button-wrapper {
+    width: 100%;
+  }
+  
+  .details-button {
+    width: 100%;
+    padding: 10px 0;
+    color: #202020;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+	box-shadow:
+	0 0 7px #0ad2e8f6,
+	0 0 10px #0ad2e8de,
+	0 0 21px #0ad2e8af;
+
+    margin-top: 15px;
+
+    font-family: NotoSans;
+
+  }
+  
+  button:hover{
+    box-shadow:
+	0 0 12px #0ad2e8f6,
+	0 0 18px #0ad2e8de,
+	0 0 28px #0ad2e8af;
+  }
+
+  #SC{
+    grid-row: 2;
+  }
