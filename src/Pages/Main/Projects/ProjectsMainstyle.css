@@ -27,7 +27,7 @@ html, body {
 }
 
 #RCard {
-    background-image: url("/src/images/stpst.jpg");
+    background-image: url("/src/Images/stpst.jpg");
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -36,7 +36,7 @@ html, body {
 }
 
 #LCard {
-    background-image: url("/src/images/NSTEditor.webp");
+    background-image: url("/src/Images/NSTEditor.webp");
     background-size: cover;
     height: 100%;
     width: 100%;

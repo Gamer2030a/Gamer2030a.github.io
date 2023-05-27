@@ -34,7 +34,7 @@ html, body {
 .Banner{
     width: 100vw;
     height: 30%;
-    background-image: url("/src/images/stpst.jpg");
+    background-image: url("/src/Images/stpst.jpg");
     background-size: cover;
     background-position-y: -200px;
 }
