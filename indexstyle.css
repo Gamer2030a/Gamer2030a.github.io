@@ -492,6 +492,8 @@ box-shadow:
 	margin-top: 0.5rem;
 	margin-right: 2rem;
 	position: sticky;
+
+	visibility: hidden; 
 }
 
 .menutoggle{
