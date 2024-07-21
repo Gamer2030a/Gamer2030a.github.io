@@ -200,11 +200,16 @@ width: 100%;
 }
 
 .WSDes{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	
 	color: #0ad1e8;
 	background-color: #202020;
 	height: 500px;
 	float: left;
-	margin-right: 0%;
+	margin-left: 0%;
 	margin-left: 20px;
 	margin-top: 8%;
 	width: 30%;
@@ -212,10 +217,9 @@ width: 100%;
 	border-radius: 12px;
 }
 
-.WSDes h3,.CHDes h3, .TCDes h3{
+.WSDes h3, .CHDes h3{
 	align-self: center;
 	font-size: 20px;
-	margin-left: 25%;
 	margin-top: 5%;
 	color: white;
 	font-family: Excluded;
@@ -226,7 +230,8 @@ width: 100%;
 	0 0 21px #0ad2e879;
 }
 
-.WSDes p,.CHDes p, .TCDes p{
+
+.WSDes p,.CHDes p{
 	align-self: center;
 	font-size: 18px;
 	margin-left: 5%;
@@ -237,11 +242,10 @@ width: 100%;
 
 }
 
-.WSDes button,.CHDes button, .TCDes button{
+.WSDes button ,.CHDes button{
 	align-self: center;
 	font-size: 18px;
-	margin-left: 35%;
-	margin-top: 8%;
+	margin-top: 6%;
 
 	color: rgb(8, 241, 230);
 	size: 200px;
@@ -260,7 +264,8 @@ width: 100%;
   	0 0 21px #0ad2e879;
 }
 
-.WSDes button:hover , .CHDes button:hover, .TCDes button:hover{
+
+.WSDes button:hover , .CHDes button:hover{
   box-shadow:
   0 0 12px #0ad2e8f6,
   0 0 18px #0ad2e8d3,
@@ -268,7 +273,7 @@ width: 100%;
 }
 
 
-.WSDes:hover , .CHDes:hover , .TCDes:hover{
+.WSDes:hover , .CHDes:hover{
 	box-shadow:
 	0 0 7px #0ad2e8f6,
 	0 0 10px #0ad2e8d3,
@@ -290,6 +295,13 @@ width: 100%;
 }
 
 .CHDes{
+
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
 	color: #0ad1e8;
 	background-color: #202020;
 	height: 500px;
@@ -313,6 +325,7 @@ width: 100%;
 	width:	65%;
 	height: 500px;
 	float: left;
+
 	background-image: url(/src/Images/untitled5.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -325,38 +338,21 @@ width: 100%;
 	width: 100%;
 }
 
-.TCDes{
-	color: #0ad1e8;
-	background-color: #202020;
-	height: 500px;
-	float: left;
-	margin-right: 0%;
-	margin-left: 20px;
-	margin-top: 8%;
-
-	width: 30%;
-
-	margin-top: 8%;
-	border-radius: 12px;
-}
-
-.TCDes button{
-	margin-top: 60%;
-}
-
 .TCVid {
-	
-	margin-top: 8%;
-	float: right;
-	margin-right: 3%;
-	height: 500px;
-	width: 65%;
-	background-color: #171717;
-
-	background-image: url(/src/Images/NSTEditor.webp);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position-x: 0px;
+    margin-top: -14%;
+    float: right;
+    margin-right: -5%;
+    height: 920px; /* Make height auto to maintain aspect ratio */
+    width: 65%;
+    background-color: #171717;
+    background-image: url(/src/Images/NSTEditor.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 0px;
+    max-width: 1500px; /* Maximum width */
+    min-width: 300px; /* Minimum width */
+    transition: width 0.3s, height 0.3s; /* Smooth transition for resizing */
+    
 }
 
 @keyframes reveal {
@@ -373,7 +369,7 @@ width: 100%;
 	width: 100%;
 	height: 100%;
 	background-color: #171717;
-	margin-top: 30%;
+	margin-top: 0%;
 
 	position: relative;
 }
@@ -398,8 +394,8 @@ width: 100%;
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	background-image: url("/src/Images/PFP.webp");
-	background-position: -80px;
+	background-image: url("/src/Images/Updatedprof.jfif");
+	background-position: 0px;
 	background-size: cover;
 }
 
@@ -555,6 +551,15 @@ input[type=checkbox]:checked ~ #SPMiddle{
 	opacity: 0;
 	animation: SPMShow 2s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
+/*----------------------Projects Showcase Animation----------------------------------*/
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 6 - 10px * 6));
+    }
+}
 
 /*----------------------Menu Animation Setup----------------------------------*/
 /*----------------------Menu Animation Keyframes------------------------------*/
@@ -604,12 +609,61 @@ input[type=checkbox]:checked ~ #SPMiddle{
 	  position: relative;
 	}
 }
+
+/*----------------------Start of Projects Showcase Responsive screen settings------------------------------*/
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .CHVid{
+    max-width: 1500px;
+    width:	65%;
+    height: 500px;
+    background-position-x: -40px;
+    }
+
+    .CHDes{
+      margin-top: 8%;
+    }
+
+    .aboutMe{
+	    margin-top: -45%;
+    }
+
+}
+
+/* Extra large screens */
+@media (min-width: 2500px) {
+  .CHVid{
+    max-width: 5500px;
+    width:	65%;
+    height: 750px;
+    background-position-x: -40px;
+    margin-left: 1%;
+  }
+
+  .CHDes{
+    margin-top: 14%;
+    margin-right: 3%;
+  }
+    
+  .aboutMe{
+    margin-top: 0%;
+  }
+
+}
+
+
+/*----------------------End of Projects Showcase Responsive screen settings------------------------------*/
 /*----------------------Menu Animation Keyframes------------------------------*/
 /*----------------------Projects showcase-------------------------------------*/
 .Cards {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: max-content;
+    animation: scroll 20s ease-in infinite;
+	
 
 }
 
