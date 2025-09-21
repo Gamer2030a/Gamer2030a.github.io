@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Parsa Dehghani — Game Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Parsa Dehghani — Game developer focusing on Unreal, OpenGL/Vulkan, engine tech, and immersive gameplay.">
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Parsa Dehghani — Game Dev" />
+  <meta property="og:description" content="Projects, skills, and contact for Parsa Dehghani." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="app/images/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "ui-sans-serif", "system-ui"],
+            display: ["Orbitron", "ui-sans-serif", "system-ui"],
+          },
+          colors: {
+            ink: {
+              50: "#f4f7fb",
+              100: "#e8eef7",
+              800: "#121824",
+              900: "#0b1220",
+            },
+            brand: {
+              500: "#4facfe",
+              600: "#36a2ff",
+              700: "#008aff",
+            },
+          },
+          boxShadow: {
+            glow: "0 10px 30px -5px rgba(79, 172, 254, .35)",
+          },
+          backgroundImage: {
+            'noise': "url('app/images/noise.png')",
+          },
+        },
+      },
+      darkMode: 'class'
+    };
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/J+e8d0H1GfZC5qGx1aQp1r4C4bW+q8R6v0E2Xr3nV7N2n7I1hZy8jzU3l1bqvF1U7qm+6nYw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Fine-tuned polish */
+    .glass {
+      background: rgba(17, 24, 39, 0.55);
+      backdrop-filter: blur(10px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 60%, #6ee7ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-overlay {
+      background: radial-gradient(1200px 800px at 50% 20%, rgba(79, 172, 254, .18), transparent), linear-gradient(180deg, rgba(11, 18, 32, .7) 0%, rgba(11, 18, 32, .85) 70%, rgba(11, 18, 32, 1) 100%);
+    }
+
+    .card {
+      background: #1a2233;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .tag {
+      background: #222c40;
+      border: 1px solid rgba(79, 172, 254, .4);
+    }
+
+    .sr-only-focusable:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-ink-900 text-slate-200 antialiased selection:bg-brand-600/30 selection:text-white">
+  <!-- Skip link -->
+  <a href="#content" class="sr-only sr-only-focusable rounded-md bg-brand-600 px-3 py-2 text-white">Skip to content</a>
+
+  <!-- Background video -->
+  <video autoplay muted loop playsinline class="fixed inset-0 w-full h-full object-cover -z-10"
+    poster="app/images/hero-fallback.jpg">
+    <source src="app/videos/hero-bg-home.mp4" type="video/mp4" />
+  </video>
+  <div aria-hidden="true" class="fixed inset-0 -z-10 hero-overlay"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-white/10">
+    <div class="glass">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#home" class="flex items-center gap-3 group" aria-label="Go to homepage">
+            <div
+              class="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-600 to-sky-400 grid place-items-center shadow-glow">
+              <span class="font-display text-lg">PD</span>
+            </div>
+            <span class="font-display tracking-widest text-sm text-slate-300 group-hover:text-white">PARSA
+              DEHGHANI</span>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-8 font-medium">
+            <a class="hover:text-blue-500" href="#about">About</a>
+            <a class="hover:text-blue-500" href="#projects">Projects</a>
+            <a class="hover:text-blue-500" href="#skills">Skills</a>
+            <a class="hover:text-blue-500" href="#contact">Contact</a>
+            <a class="hover:text-blue-500" href="#cv">CV</a>
+          </nav>
+  </header>
+
+  <main id="content">
+    <!-- Hero -->
+    <section id="home" class="relative pt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
+            <span class="gradient-text">Parsa Dehghani</span>
+            <span class="block text-slate-300 mt-3">Game Developer & Engine Tinkerer</span>
+          </h1>
+          <p class="mt-6 text-slate-300/90 text-lg max-w-xl">
+            I build responsive game systems, tools, and worlds—specializing in Unreal, OpenGL/Vulkan backends, and
+            high-performance gameplay loops.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects"
+              class="group inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white shadow-glow hover:translate-y-[-1px] transition">
+              View Projects <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition"></i>
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-3 font-semibold hover:bg-white/5">
+              Contact Me <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+          <div class="mt-8 flex items-center gap-5 text-slate-300/90">
+            <a href="https://github.com/" class="hover:text-white" aria-label="GitHub"><i
+                class="fa-brands fa-github text-2xl"></i></a>
+            <a href="https://www.linkedin.com/" class="hover:text-white" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin text-2xl"></i></a>
+            <a href="https://x.com/" class="hover:text-white" aria-label="Twitter / X"><i
+                class="fa-brands fa-x-twitter text-2xl"></i></a>
+            <a href="https://youtube.com/" class="hover:text-white" aria-label="YouTube"><i
+                class="fa-brands fa-youtube text-2xl"></i></a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] w-full rounded-2xl ring-1 ring-white/10 overflow-hidden card">
+            <img src="app/Imgs/Projects/UnReleased.webp" alt="Showcase montage of Parsa's game projects"
+              class="h-full w-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mt-24">
+      <div class="max-w-7xl  mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-10 items-start">
+          <div class="lg:col-span-1">
+            <div class="rounded-2xl overflow-hidden ring-1 ring-white/10 card">
+              <img src="app/Imgs/Projects/UnReleased.webp" alt="Portrait of Parsa Dehghani"
+                class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="lg:col-span-2 ">
+            <h2 class="font-display text-3xl md:text-4xl">About Me</h2>
+            <p class="mt-4 text-slate-300/90 leading-relaxed">
+              I'm a game developer with a love for atmospheric design and robust systems. I've worked across gameplay,
+              rendering, and tools, aiming for AAA feel with lean, independent workflows. Recent work includes engine
+              abstraction layers (<span class="font-mono">OpenGLDevice</span>, Vulkan), material/shader systems, and
+              performance profiling.
+            </p>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+              <li class="tag rounded-lg px-3 py-2">Unreal Engine (C++)</li>
+              <li class="tag rounded-lg px-3 py-2">OpenGL / Vulkan</li>
+              <li class="tag rounded-lg px-3 py-2">Engine Architecture</li>
+              <li class="tag rounded-lg px-3 py-2">AI & Gameplay Systems</li>
+              <li class="tag rounded-lg px-3 py-2">ImGui Tooling</li>
+              <li class="tag rounded-lg px-3 py-2">Optimization & Profiling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-6">
+          <h2 class="font-display text-3xl md:text-4xl">Featured Projects</h2>
+          <a href="#contact" class="text-sm opacity-80 hover:opacity-100">Want the playable builds? →</a>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-8">
+          <article class="card rounded-2xl overflow-hidden ring-1 ring-white/10">
+            <figure class="relative">
+              <img class="w-full aspect-[16/9] object-cover" src="app/Imgs/projects/StormScreen.jpg"
+                alt="Cyber Quest gameplay screenshot" />
+              <figcaption class="absolute bottom-3 left-3 rounded-md bg-black/50 px-2 py-1 text-xs">Renderer
+              </figcaption>
+            </figure>
+            <div class="p-6">
+              <h3 class="font-display text-xl">NeoStorm</h3>
+              <p class="mt-2 text-slate-300/90">A custom made game engine with Cross-platform in mind. supporting multi rendering pipeline via renderer layer abstractions  designed with performance and graphics in mind and bundled with a fast and easy to navigate Sandbox.</p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs">
+                <li class="tag rounded-full px-3 py-1">OpenGL</li>
+                <li class="tag rounded-full px-3 py-1">Vulkan</li>
+                <li class="tag rounded-full px-3 py-1">OpenGL</li>
+                <li class="tag rounded-full px-3 py-1">Abstractions</li>
+                <li class="tag rounded-full px-3 py-1">ImGui</li>
+              </ul>
+              <div class="mt-5 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600">Read Case Study
+                  <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="#" class="inline-flex items-center gap-2 opacity-80 hover:opacity-100"><i
+                    class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card rounded-2xl overflow-hidden ring-1 ring-white/10">
+            <figure class="relative">
+              <img class="w-full aspect-[16/9] object-cover"
+                src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2453290/28ee7a889fe86665e8cd8514360547fe4f663d91/header.jpg?t=1756171891"
+                alt="Zompell gameplay screenshot" />
+              <figcaption class="absolute bottom-3 left-3 rounded-md bg-black/50 px-2 py-1 text-xs">Unreal / C++
+              </figcaption>
+            </figure>
+            <div class="p-6">
+              <h3 class="font-display text-xl">Zompell</h3>
+              <p class="mt-2 text-slate-300/90">A single-player, first-person shooter combining narrative-driven
+                missions with wave-based survival. The game features a **Campaign Mode** to investigate a zombie
+                outbreak and a **Survival Mode** to test your skills on unique maps. Players use a combination of modern
+                firearms and **experimental spell-tech** from four categories: Fire, Cold, Blood, and Shadow.</p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs">
+                <li class="tag rounded-full px-3 py-1">Action</li>
+                <li class="tag rounded-full px-3 py-1">FPS</li>
+                <li class="tag rounded-full px-3 py-1">Singleplayer</li>
+                <li class="tag rounded-full px-3 py-1">Survival</li>
+              </ul>
+              <div class="mt-5 flex items-center gap-3">
+                <a href="https://store.steampowered.com/app/2453290/Zompell/"
+                  class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600">View on Steam <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Gamer2030a"
+                  class="inline-flex items-center gap-2 opacity-80 hover:opacity-100"><i
+                    class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card rounded-2xl overflow-hidden ring-1 ring-white/10">
+            <figure class="relative">
+              <img class="w-full aspect-[16/9] object-cover"
+                src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2693900/header.jpg?t=1705978290"
+                alt="Henry's Escape gameplay screenshot" />
+              <figcaption class="absolute bottom-3 left-3 rounded-md bg-black/50 px-2 py-1 text-xs">Unity / C#
+              </figcaption>
+            </figure>
+            <div class="p-6">
+              <h3 class="font-display text-xl">Henry's Escape</h3>
+              <p class="mt-2 text-slate-300/90">An adventure game focused on puzzle-solving. The player must help
+                **Henry**, who has been wrongfully accused of murder, escape from prison and uncover the true killer.
+                The game features realistic graphics and is designed to replicate the experience of a real-life escape
+                room.</p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs">
+                <li class="tag rounded-full px-3 py-1">Adventure</li>
+                <li class="tag rounded-full px-3 py-1">Puzzle</li>
+                <li class="tag rounded-full px-3 py-1">Horror</li>
+                <li class="tag rounded-full px-3 py-1">Singleplayer</li>
+                <li class="tag rounded-full px-3 py-1">Story Rich</li>
+              </ul>
+              <div class="mt-5 flex items-center gap-3">
+                <a href="https://store.steampowered.com/app/2693900/Henrys_Escape_Prison/"
+                  class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600">View on Steam <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Gamer2030a"
+                  class="inline-flex items-center gap-2 opacity-80 hover:opacity-100"><i
+                    class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card rounded-2xl overflow-hidden ring-1 ring-white/10">
+            <figure class="relative">
+              <img class="w-full aspect-[16/9] object-cover" src="app/Imgs/projects/QuestionMark.jpg"
+                alt="Engine abstraction layers diagram" />
+              <figcaption class="absolute bottom-3 left-3 rounded-md bg-black/50 px-2 py-1 text-xs">Unreal / C++
+              </figcaption>
+            </figure>
+            <div class="p-6">
+              <h3 class="font-display text-xl">UnAnnounced FPS Shooter</h3>
+              <p class="mt-2 text-slate-300/90">Cross-platform <span class="font-mono">GFXDevice</span> with swapchain
+                mgmt, command buffers, material system, and ImGui tooling. Clean interface ↔ </p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs">
+                <li class="tag rounded-full px-3 py-1">C++</li>
+                <li class="tag rounded-full px-3 py-1">Blueprints</li>
+                <li class="tag rounded-full px-3 py-1">AI Programming</li>
+                <li class="tag rounded-full px-3 py-1">Behavior Trees</li>
+                <li class="tag rounded-full px-3 py-1">Animation Blueprints / Motion Matching</li>
+                <li class="tag rounded-full px-3 py-1">General Programming</li>
+              </ul>
+              <div class="mt-5 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600">Read Case Study
+                  <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="#" class="inline-flex items-center gap-2 opacity-80 hover:opacity-100"><i
+                    class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card rounded-2xl overflow-hidden ring-1 ring-white/10">
+            <figure class="relative">
+              <img class="w-full aspect-[16/9] object-cover"
+                src="https://img.itch.zone/aW1nLzIyNDczNjMyLnBuZw==/315x250%23c/tms%2BQS.png"
+                alt="Left in 2019 GMTK Game Jam screenshot" />
+              <figcaption class="absolute bottom-3 left-3 rounded-md bg-black/50 px-2 py-1 text-xs">Unreal Engine 5 /
+                Game Jam</figcaption>
+            </figure>
+            <div class="p-6">
+              <h3 class="font-display text-xl">Left in 2019</h3>
+              <p class="mt-2 text-slate-300/90">
+                A **psychological horror** game created in **48 hours** for the GMTK Game Jam. The player is trapped in
+                a **time loop** that resets upon death, with the objective of surviving until day 31. The game focuses
+                on atmosphere, with a house that constantly changes and decays, and features audio tapes that contain
+                warnings or lies.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs">
+                <li class="tag rounded-full px-3 py-1">Horror</li>
+                <li class="tag rounded-full px-3 py-1">Psychological Horror</li>
+                <li class="tag rounded-full px-3 py-1">Time Loop</li>
+                <li class="tag rounded-full px-3 py-1">Survival</li>
+                <li class="tag rounded-full px-3 py-1">Story Rich</li>
+                <li class="tag rounded-full px-3 py-1">Game Jam</li>
+              </ul>
+              <div class="mt-5 flex items-center gap-3">
+                <a href="https://gamer2030.itch.io/leftin2019" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600">
+                  Play on Itch.io <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Gamer2030a"
+                  class="inline-flex items-center gap-2 opacity-80 hover:opacity-100"><i
+                    class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+          
+
+
+
+          
+          <article class="card rounded-2xl overflow-hidden ring-1 ring-white/10">
+            <figure class="relative">
+              <img class="w-full aspect-[16/9] object-cover" src="app/Imgs/projects/QuestionMark.jpg"
+                alt="Engine abstraction layers diagram" />
+            </figure>
+            <div class="p-6 text-center">
+              <h3 class="font-display  text-xl">More Projects</h3>
+              <p class="mt-2 text-slate-300/90">You can view more of my projects here</p>
+              <div class="mt-5 flex  justify-center items-center gap-3">
+                 <a class="rounded-xl bg-brand-600 px-5 py-3 text-white shadow-glow"
+              href="app/cv/Parsa-Dehghani-CV.pdf">+</a>
+                  <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="font-display text-3xl md:text-4xl">Skills</h2>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-10">
+          <div class="rounded-2xl ring-1 ring-white/10 p-6 card">
+            <h3 class="font-semibold">Technical</h3>
+            <div class="mt-4 grid gap-4">
+              <!-- Progress bars: animated on intersection -->
+              <div>
+                <div class="flex justify-between text-sm"><span>Unreal Engine</span><span>Advanced</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-brand-600" data-w="92%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm"><span>OpenGL / Vulkan</span><span>Advanced</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-sky-400" data-w="88%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm"><span>C++</span><span>Advanced</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-cyan-400" data-w="90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm"><span>Tooling / ImGui</span><span>Pro</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-emerald-400" data-w="85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl ring-1 ring-white/10 p-6 card">
+            <h3 class="font-semibold">Design & Gameplay</h3>
+            <div class="mt-4 grid gap-4">
+              <div>
+                <div class="flex justify-between text-sm"><span>Gameplay Architecture</span><span>Pro</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-fuchsia-400" data-w="90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm"><span>AI / Behavior</span><span>Advanced</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-indigo-400" data-w="82%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm"><span>Performance & Profiling</span><span>Advanced</span>
+                </div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-rose-400" data-w="88%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm"><span>UX / UI</span><span>Strong</span></div>
+                <div class="mt-2 h-2 rounded bg-white/10 overflow-hidden">
+                  <div class="skill w-0 h-full bg-amber-400" data-w="78%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Contact page -->
+<section id="contact" class="mt-24">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="rounded-2xl ring-1 ring-white/10 p-8 card">
+      <h2 class="font-display text-3xl md:text-4xl">Get in touch</h2>
+      <p class="mt-3 text-slate-300/90">
+        Have a project or role in mind? Send a message — I'll reply within 1–2 business days.
+      </p>
+
+      <form action="https://formsubmit.co/gamer2030fasterthangame@gmail.com" 
+            method="POST" 
+            enctype="multipart/form-data" 
+            class="mt-8 grid gap-6">
+
+        <!-- Enable FormSubmit CAPTCHA -->
+        <input type="hidden" name="_captcha" value="true">
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm opacity-80" for="name">Your Name</label>
+            <input id="name" name="name" required
+              class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:ring-2 focus:ring-brand-600" />
+          </div>
+          <div>
+            <label class="text-sm opacity-80" for="email">Email</label>
+            <input id="email" name="email" type="email" required
+              class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:ring-2 focus:ring-brand-600" />
+          </div>
+        </div>
+
+        <div>
+          <label class="text-sm opacity-80" for="_subject">Subject</label>
+          <input id="_subject" name="_subject"
+            class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:ring-2 focus:ring-brand-600" />
+        </div>
+
+        <div>
+          <label class="text-sm opacity-80" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required
+            class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:ring-2 focus:ring-brand-600"></textarea>
+        </div>
+
+        <div>
+          <label class="text-sm opacity-80" for="attachment">Attachment</label>
+          <input id="attachment" name="attachment" type="file"
+            class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:ring-2 focus:ring-brand-600" />
+        </div>
+
+        <button
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 py-3 font-semibold text-white shadow-glow hover:translate-y-[-1px] transition">
+          Send Message <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- CV / Footer CTA -->
+    <section id="cv" class="mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div
+          class="rounded-2xl ring-1 ring-white/10 p-8 flex flex-col md:flex-row items-center justify-between gap-6 card">
+          <div>
+            <h2 class="font-display text-2xl">Download my CV</h2>
+            <p class="mt-1 text-slate-300/90">Short and focused — projects, engines, and shipped work.</p>
+          </div>
+          <div class="flex gap-3">
+            <a class="rounded-xl border border-white/10 px-5 py-3 hover:bg-white/5" href="app/cv/Parsa-Dehghani-CV.pdf"
+              download>PDF</a>
+            <a class="rounded-xl bg-brand-600 px-5 py-3 text-white shadow-glow"
+              href="app/cv/Parsa-Dehghani-CV.pdf">View</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Socials (Split Layout) -->
+<section id="socials" class="mt-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Text Left -->
+    <div>
+      <h2 class="font-display text-3xl md:text-4xl">Find Me Online</h2>
+      <p class="mt-3 text-slate-300/90">
+        Connect with me on my social platforms — I share updates, projects, and behind-the-scenes devlogs.
+      </p>
+    </div>
+
+    <!-- Socials Right -->
+    <div class="grid sm:grid-cols-2 gap-6">
+      <!-- GitHub -->
+      <a href="https://github.com/Gamer2030a" target="_blank" rel="noopener"
+        class="card rounded-2xl ring-1 ring-white/10 p-6 flex flex-col items-center text-center hover:translate-y-[-4px] hover:shadow-glow transition">
+        <i class="fa-brands fa-github text-4xl text-white mb-3"></i>
+        <h3 class="font-semibold">GitHub</h3>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+        class="card rounded-2xl ring-1 ring-white/10 p-6 flex flex-col items-center text-center hover:translate-y-[-4px] hover:shadow-glow transition">
+        <i class="fa-brands fa-linkedin text-4xl text-[#0A66C2] mb-3"></i>
+        <h3 class="font-semibold">LinkedIn</h3>
+      </a>
+
+      <!-- Artstation -->
+      <a href="https://www.artstation.com/" target="_blank" rel="noopener"
+        class="card rounded-2xl ring-1 ring-white/10 p-6 flex flex-col items-center text-center hover:translate-y-[-4px] hover:shadow-glow transition">
+        <i class="fa-brands fa-artstation text-4xl text-white mb-3"></i>
+        <h3 class="font-semibold">ArtStation</h3>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com/" target="_blank" rel="noopener"
+        class="card rounded-2xl ring-1 ring-white/10 p-6 flex flex-col items-center text-center hover:translate-y-[-4px] hover:shadow-glow transition">
+        <i class="fa-brands fa-youtube text-4xl text-red-500 mb-3"></i>
+        <h3 class="font-semibold">YouTube</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="mt-24 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-brand-600 to-sky-400 grid place-items-center"><span
+            class="font-display text-sm">PD</span></div>
+        <p class="text-sm text-slate-400">© <span id="year"></span> Parsa Dehghani. All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300/90">
+        <a href="#home" class="hover:text-white text-sm">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Parsa Dehghani",
+        "jobTitle": "Game Developer",
+        "url": "https://your-domain.example/",
+        "sameAs": [
+          "https://github.com/",
+          "https://www.linkedin.com/",
+          "https://x.com/",
+          "https://www.youtube.com/"
+        ]
+      }
+    </script>
+
+  <script>
+
+    const root = document.documentElement;
+
+    // Animate skill bars on view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.skill').forEach(el => {
+            el.style.width = el.dataset.w;
+            el.style.transition = 'width 1.2s ease-out';
+          });
+          observer.unobserve(e.target);
+        }
+      })
+    }, { threshold: 0.35 });
+    document.querySelectorAll('#skills .rounded-2xl').forEach(sec => observer.observe(sec));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
